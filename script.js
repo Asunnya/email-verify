@@ -11,4 +11,3 @@ function separatorEmail(email) {
         isEmail = false
    }
 }
-

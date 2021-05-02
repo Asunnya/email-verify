@@ -1,0 +1,25 @@
+{
+  "name": "email-verify",
+  "version": "1.0.0",
+  "main": "test/email.test.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Asunnya/email-verify.git"
+  },
+  "author": "isa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Asunnya/email-verify/issues"
+  },
+  "homepage": "https://github.com/Asunnya/email-verify#readme",
+  "directories": {
+    "test": "test"
+  },
+  "description": "test",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

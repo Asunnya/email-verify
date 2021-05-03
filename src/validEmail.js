@@ -1,30 +1,30 @@
-function validationUsuario(usuario) {
-    let usersize = usuario.length;
+function userValidation(user) {
+    let userSize = user.length;
 
-    if (usersize > 1) {
-        let res = /^[a-zA-Z]+$/.test(usuario);
-        if (res) {
+    if (userSize > 1) {
+        let resTwo = /^[a-zA-Z]+$/.test(user);
+        if (resTwo) {
             return true;
         }
     }
     return false;
 }
 
-function validationDominio(dominio) {
+function domainValidation(domain) {
 
-    let dominioSize = dominio.length;
-    let dominioDot = (dominio.split('.').length - 1) 
+    let domainSize = domain.length;
+    let domainDot = (domain.split('.').length - 1) 
 
-    if (dominioSize > 4 && dominioDot === 1 )  {
-        let res = /^[a-z.]+$/.test(dominio);
-        if (res) {
+    if (domainSize > 4 && domainDot === 1 )  {
+        let resOne = /^[a-z.]+$/.test(domain);
+        if (resOne) {
             return true;
         }
     }
     return false;
 }
 
-function validatorEmail(email) {
+function emailValidation(email) {
     let index = email.indexOf('@');
     let count = 0;
 
@@ -36,10 +36,10 @@ function validatorEmail(email) {
             pos = email.indexOf('@', pos+1);
         }
         if (count === 1) {
-            usuario = email.slice(0,index);
-            dominio = email.slice(index+1);
+            user = email.slice(0,index);
+            domain = email.slice(index+1);
 
-            if (validationUsuario(usuario) && validationDominio(dominio)) {
+            if (userValidation(user) && domainValidation(domain)) {
                 return true;
             }
         }
@@ -47,4 +47,4 @@ function validatorEmail(email) {
     return false;
 }
 
-module.exports = validatorEmail;
+module.exports = emailValidation;

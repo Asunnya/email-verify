@@ -16,7 +16,7 @@ function validationDominio(dominio) {
     let dominioDot = (dominio.split('.').length - 1) 
 
     if (dominioSize > 4 && dominioDot === 1 )  {
-        let res = /^[a-zA-Z.]+$/.test(dominio);
+        let res = /^[a-z.]+$/.test(dominio);
         if (res) {
             return true;
         }

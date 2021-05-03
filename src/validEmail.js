@@ -11,8 +11,11 @@ function validationUsuario(usuario) {
 }
 
 function validationDominio(dominio) {
-    let dominiosize = dominio.length;
-    if (dominiosize > 3) {
+
+    let dominioSize = dominio.length;
+    let dominioDot = (dominio.split('.').length - 1) 
+
+    if (dominioSize > 4 && dominioDot === 1 )  {
         let res = /^[a-zA-Z.]+$/.test(dominio);
         if (res) {
             return true;
@@ -23,7 +26,7 @@ function validationDominio(dominio) {
 
 function validatorEmail(email) {
     let index = email.indexOf('@');
-    count = 0;
+    let count = 0;
 
     if (index !== -1) {
         let pos = index;

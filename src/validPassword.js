@@ -7,10 +7,13 @@ function validPassword(pass) {
     let number = /[0-9]+/.test(pass)
     let accent = /[^0-9a-zA-Z!@#$%^&*()_+\-=/[{};':"|,.<>]/.test(pass)
 
-    if (passSize >= 8 && upperCase && charSpecial && number && lowerCase && accent === false) {
-        return true
-    }
-    return false
+    return (
+        passSize >= 8 && 
+        upperCase && 
+        charSpecial && 
+        number && 
+        lowerCase && accent === false
+    );
 }
 
 module.exports = validPassword;
